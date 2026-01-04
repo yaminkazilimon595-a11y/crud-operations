@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Management</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin:0;
+    background:#0f0f0f;
+    color:#f1f1f1;
+}
+
+/* ===== NAVBAR ===== */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #1f1f1f;
+  overflow: hidden;
+}
+
+.student-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Card width for grid look */
+.card{
+    width: 350px;
+    max-height: max-content;
+}
+
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  padding: 14px 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background: #04AA6D;
+}
+
+/* ===== CONTAINER ===== */
+.main-container{
+    padding:30px;
+}
+
+/* ===== CARD ===== */
+.card, .student-card{
+    background:#1c1c1c;
+    border-radius:12px;
+    padding:20px;
+    margin:20px auto;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    max-width:500px;
+}
+
+.card h4, .student-card h2{
+    margin-bottom:10px;
+    color:#04AA6D;
+}
+
+/* ===== FORM ===== */
+form{
+    background:#1c1c1c;
+    padding:25px;
+    border-radius:12px;
+    max-width:500px;
+    margin:auto;
+}
+
+label{
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0 18px 0;
+    border:none;
+    border-radius:6px;
+}
+
+/* ===== BUTTON ===== */
+button, .btn{
+    background:#04AA6D;
+    color:#fff;
+    border:none;
+    padding:10px 16px;
+    border-radius:6px;
+    cursor:pointer;
+    text-decoration:none;
+    margin:5px;
+}
+
+button:hover, .btn:hover{
+    opacity:0.85;
+}
+
+.btn-edit{background:#28a745;}
+.btn-back{background:#007bff;}
+.btn-delete{background:#dc3545;}
+
+/* ===== ACTION LINKS ===== */
+.actions{
+    margin-top:15px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+{% include "navbar.html" %}
+
+<div class="main-container">
+{% block content %}
+{% endblock %}
+</div>
+
+</body>
+</html>
+

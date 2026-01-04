@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Student List</h2>
+
+<div class="student-list">
+
+    {% for i in student %}
+    <div class="card">
+        <h4>{{ i.name }}</h4>
+        <p>{{ i.email }}</p>
+        <p>{{ i.address }}</p>
+        
+        <div class="actions">
+            <a class="btn" href="{% url 'singlestudent' i.id %}">View</a>
+            <a class="btn btn-edit" href="{% url 'updatestudent' i.id %}">Edit</a>
+            <a class="btn btn-delete" href="{% url 'deletestudent' i.id %}">Delete</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

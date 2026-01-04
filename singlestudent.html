@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="student-card">
+<h2>Student Details</h2>
+
+<p><b>Name:</b> {{ student.name }}</p>
+<p><b>Email:</b> {{ student.email }}</p>
+<p><b>Address:</b> {{ student.address }}</p>
+
+<div class="actions">
+    <a class="btn btn-edit" href="{% url 'updatestudent' student.id %}">Edit</a>
+    <a class="btn btn-back" href="{% url 'studentpage' %}">Back</a>
+</div>
+</div>
+
+{% endblock %}
